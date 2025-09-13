@@ -1,0 +1,320 @@
+/* ==================== BASE ==================== */
+body.light-theme {
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #f8f9fa;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+.dark-theme-container {
+  min-height: 100vh;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar.navbar-dark {
+  background-color: #1f1f1f !important;
+}
+
+.navbar.navbar-light {
+  background-color: #26667F; /* Changed from green */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* ==================== CARDS / NOTES ==================== */
+.card,
+.note-card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover,
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .card,
+body.light-theme .note-card {
+  background-color: #ffffff;
+  color: #212529;
+  border: 1px solid #e0e0e0;
+}
+
+body.dark-theme .card,
+body.dark-theme .note-card {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+  border: 1px solid #333333;
+}
+
+
+/* ==================== MODALS ==================== */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-theme .modal-content {
+  background-color: #2a2a2a;
+  color: #f8f9fa;
+}
+
+/* ==================== DROPDOWNS ==================== */
+.dropdown-menu-dark {
+  background-color: #2a2a2a;
+  color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.dropdown-menu-dark .dropdown-item {
+  color: #f8f9fa;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+  background-color: #3a3a3a;
+}
+
+.dropdown-menu-dark .dropdown-divider {
+  border-color: #444;
+}
+
+/* ==================== BUTTONS ==================== */
+.btn-outline-secondary {
+  transition: all 0.2s ease;
+}
+
+body.dark-theme .btn-outline-secondary:hover {
+  background-color: #6bb3d4;
+  border-color: #6bb3d4;
+  color: #121212;
+}
+
+body.light-theme .btn-outline-secondary:hover {
+  background-color: #26667F;
+  border-color: #26667F;
+  color: white;
+}
+
+/* Add Note (+) button */
+body.dark-theme .btn-add-note {
+  background-color: #121212;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.light-theme .btn-add-note {
+  background-color: #26667F;
+  color: white;
+}
+
+/* ==================== ICONS ==================== */
+.note-actions i,
+.note-actions svg {
+  transition: color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.note-actions i:hover,
+.note-actions svg:hover {
+  transform: scale(1.2);
+}
+
+body.light-theme .note-actions i,
+body.light-theme .note-actions svg {
+  color: #212529;
+}
+
+body.light-theme .note-actions i:hover,
+body.light-theme .note-actions svg:hover {
+  color: #26667F;
+}
+
+body.dark-theme .note-actions i,
+body.dark-theme .note-actions svg {
+  color: #f8f9fa;
+}
+
+body.dark-theme .note-actions i:hover,
+body.dark-theme .note-actions svg:hover {
+  color: #6bb3d4;
+}
+
+/* ==================== BADGES / TAGS ==================== */
+.badge {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Light Theme */
+body.light-theme .badge {
+  background-color: #f0f0f0;
+  color: #26667F;
+  border: 1px solid #26667F;
+}
+
+/* Dark Theme */
+body.dark-theme .badge {
+  background-color: #333;
+  color: #6bb3d4;
+  border: 1px solid #6bb3d4;
+}
+
+/* ==================== DATES ==================== */
+.note-date {
+  font-size: 0.8rem;
+}
+
+body.dark-theme .note-date {
+  color: #ffffff; /* Ensure date is visible in dark mode */
+}
+
+body.light-theme .note-date {
+  color: #26667F; /* Matches light theme primary color */
+}
+
+/* Fix muted text (like date) visibility in dark mode */
+body.dark-theme .text-muted,
+body.dark-theme .note-date {
+  color: #ffffff !important;
+}
+
+.modal-dialog-scrollable .modal-body {
+  max-height: 70vh;   /* keeps content within viewport */
+  overflow-y: auto;   /* adds vertical scroll inside modal */
+}
+
+/* Summarize button normal state */
+.btn-outline-primary {
+  border-color: #26667F !important;
+  color: #26667F !important;
+  background-color: transparent !important;
+
+}
+
+/* Summarize button hover state */
+.btn-outline-primary:hover {
+  border-color: #26667F !important;
+  color: white !important;
+  background-color: #26667F !important;
+}
+
+/* Tags normal state */
+.badge {
+  background-color: #26667F !important;
+  color: #ffffff !important;
+  border: 1px solid #26667F !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
+
+/* ===== BUTTONS ===== */
+.search-bar .search-btn,
+.search-bar .clear-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10; /* make sure buttons are above input */
+}
+
+/* ===== POSITIONS ===== */
+.search-bar .search-btn {
+  right: 0.25rem;
+}
+
+.search-bar .clear-icon {
+  right: 2.5rem;  /* move left so it doesn't overlap search button */
+}
+
+/* ===== LIGHT MODE ===== */
+body.light-theme .search-bar input {
+  background-color: #ffffff;
+  color: #212529;
+  border: 1px solid #ccc;
+}
+
+body.light-theme .search-bar .search-btn,
+body.light-theme .search-bar .clear-icon {
+  background-color: transparent;
+  color: #26667F;
+  border: 1px solid white;
+ 
+}
+
+
+/* ===== DARK MODE ===== */
+body.dark-theme .search-bar input {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+ 
+}
+
+body.dark-theme .search-bar .search-btn,
+body.dark-theme .search-bar .clear-icon {
+  background-color: #2a2a2a;
+  color: #6bb3d4;   /* same as your tag color */
+  border: 1px solid #2a2a2a;
+}
+/* Dark mode placeholder color */
+body.dark-theme .search-bar input::placeholder {
+  color: #ffffff;  /* white placeholder */
+  opacity: 1;      /* ensures full visibility */
+}
+
+/* Modal footer Close button like Summarize button */
+.modal-footer .btn-close-footer {
+  border: 1px solid #26667F;
+  color: #26667F;
+  background-color: #26667F;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Input with full border-radius */
+.search-bar input {
+  border-radius: 8px;   /* keeps curved corners */
+  padding-right: 4rem;  /* leave space for buttons */
+}
+
+/* Buttons inside search bar */
+.search-bar .search-btn,
+.search-bar .clear-icon {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0;      /* make them square so input curve is visible */
+  border: none;          /* optional: match input */
+}
