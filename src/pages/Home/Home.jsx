@@ -32,7 +32,7 @@ const Home = ({ theme, toggleTheme }) => {
       return;
     }
 
-    const res = await fetch("http://localhost:8000/api/notes", {
+    const res = await fetch("https://vercel-backend-lilac-theta.vercel.app/api/notes", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const Home = ({ theme, toggleTheme }) => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:8000/api/notes/${id}`, {
+      const res = await fetch(`https://vercel-backend-lilac-theta.vercel.app/api/notes/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -87,7 +87,7 @@ const Home = ({ theme, toggleTheme }) => {
   const handlePin = async (id) => {
     try {
       const res = await axios.patch(
-        `http://localhost:8000/api/notes/${id}/pin`,
+        `https://vercel-backend-lilac-theta.vercel.app/api/notes/${id}/pin`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -124,7 +124,7 @@ const Home = ({ theme, toggleTheme }) => {
   const handleSummarize = async (id) => {
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/notes/${id}/summarize`,
+        `https://vercel-backend-lilac-theta.vercel.app/notes/${id}/summarize`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
