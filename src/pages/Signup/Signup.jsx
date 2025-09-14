@@ -21,7 +21,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("https://vercel-backend-lilac-theta.vercel.app/api/auth/signup", {
+      const response = await fetch("http://localhost:8000/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullname: name, email, password }),
