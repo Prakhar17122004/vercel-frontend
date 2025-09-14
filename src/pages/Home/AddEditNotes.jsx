@@ -14,7 +14,7 @@ const AddEditNotes = ({ noteData, type, onClose, refreshNotes, theme }) => {
 
   const addNewNote = async () => {
     try {
-      const res = await fetch("https://vercel-backend-lyart-beta.vercel.app/api/notes", {
+      const res = await fetch("http://localhost:8000/api/notes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const AddEditNotes = ({ noteData, type, onClose, refreshNotes, theme }) => {
 
   const editNote = async () => {
     try {
-      const res = await fetch(`https://vercel-backend-lyart-beta.vercel.app/api/notes/${noteData._id}`, {
+      const res = await fetch(`http://localhost:8000/api/notes/${noteData._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
